@@ -1,8 +1,18 @@
 //Module to display html for wheels section.
 
 import { getWheels } from "./database.js"
+import { setWheels } from "./database.js"
 
 const wheels = getWheels()
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "wheel") {
+            setWheels(parseInt(event.target.value))
+        }
+    }
+)
 
 export const Wheels = () => {
     let html = "<ul>"

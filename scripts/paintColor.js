@@ -1,7 +1,17 @@
 //This module creates html for the paint color selection section of the site.
-import {getPaintColors} from "./database.js"
+import { getPaintColors } from "./database.js"
+import { setPaintColor } from "./database.js"
 
 const colors = getPaintColors();
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "color") {
+            setPaintColor(parseInt(event.target.value))
+        }
+    }
+)
 
 export const paintColors = () => {
     let html = "<ul>"

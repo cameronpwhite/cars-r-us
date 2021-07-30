@@ -1,8 +1,18 @@
 //Module to display html for technology section.
 
-import {getTechnologies} from "./database.js"
+import { getTechnologies } from "./database.js"
+import { setTechnology } from "./database.js"
 
 const technologies = getTechnologies()
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "tech") {
+            setTechnology(parseInt(event.target.value))
+        }
+    }
+)
 
 export const Technologies = () => {
     let html = "<ul>"
