@@ -4,6 +4,16 @@ import { paintColors } from "./paintColor.js"
 import { Technologies } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
 // import { Orders } from "./Orders.js"
+import { addCustomerOrder } from "./database.js"
+
+document.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === "orderButton") {
+            addCustomerOrder()
+        }
+    }
+)
 
 export const carsRUS = () => {
     return `
@@ -34,7 +44,7 @@ export const carsRUS = () => {
 
         <article class="customOrders">
             <h2>Custom Car Orders</h2>
-            
+
         </article>
     `
 }
