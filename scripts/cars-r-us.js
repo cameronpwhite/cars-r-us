@@ -3,6 +3,7 @@ import { Interiors } from "./Interior.js"
 import { paintColors } from "./paintColor.js"
 import { Technologies } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
+// import { Orders } from "./Orders.js"
 
 export const carsRUS = () => {
     return `
@@ -10,19 +11,19 @@ export const carsRUS = () => {
 
         <article class="choices">
             <section class="choices__paint options">
-                <h2>Metals</h2>
+                <h2>Paint Colors</h2>
                 ${ paintColors() }
             </section>
             <section class="choices__interior options">
-                <h2>Sizes</h2>
+                <h2>Interiors</h2>
                 ${ Interiors() }
             </section>
             <section class="choices__tech options">
-                <h2>Styles</h2>
+                <h2>Technologies</h2>
                 ${ Technologies() }
             </section>
             <section class="choices__wheel options">
-                <h2>Styles</h2>
+                <h2>Wheels</h2>
                 ${ Wheels() }
             </section>
         </article>
@@ -33,7 +34,7 @@ export const carsRUS = () => {
 
         <article class="customOrders">
             <h2>Custom Car Orders</h2>
-            ${ Orders() }
+            
         </article>
     `
 }

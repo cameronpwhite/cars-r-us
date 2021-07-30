@@ -1,5 +1,5 @@
 //This module creates html for the paint color selection section of the site.
-{import getPaintColors from "./database.js"}
+import {getPaintColors} from "./database.js"
 
 const colors = getPaintColors();
 
