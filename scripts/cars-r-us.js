@@ -3,7 +3,7 @@ import { Interiors } from "./Interior.js"
 import { paintColors } from "./paintColor.js"
 import { Technologies } from "./Technology.js"
 import { Wheels } from "./Wheels.js"
-// import { Orders } from "./Orders.js"
+import { Orders } from "./Orders.js"
 import { addCustomerOrder } from "./database.js"
 
 document.addEventListener(
@@ -44,7 +44,7 @@ export const carsRUS = () => {
 
         <article class="customOrders">
             <h2>Custom Car Orders</h2>
-
+                ${ Orders() }
         </article>
     `
 }
